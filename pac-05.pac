@@ -17,4 +17,5 @@ function FindProxyForURL (url, host) {
      return "PROXY 192.168.255.2:8080";
    } else {
      return "PROXY brosedev.proxy.prismaaccess.com:8080";
+   }
 }
