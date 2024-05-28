@@ -18,9 +18,5 @@ function FindProxyForURL (url, host) {
         shExpMatch(host, "*.local"))
         return "DIRECT";
 
-   if (isInNet(myIpAddress(), "192.168.50.0”, "255.255.255.0”)) {
-     return "PROXY 192.168.255.2:8080";
-   } else {
      return "PROXY homelan.proxy.lab.prismaaccess.com:8080";
-   }
 }
