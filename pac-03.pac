@@ -54,5 +54,5 @@ function FindProxyForURL (url, host) {
       return "DIRECT";
   
   	/* Forward anything else to Prisma Explicit Proxy */
-      return "PROXY 192.168.255.6:8080";
+      return "PROXY 192.168.255.2:8080";
 }
