@@ -10,6 +10,13 @@ function FindProxyForURL (url, host) {
         shExpMatch(host, "*.acs.prismaaccess.com"))
         return "DIRECT";
 
+  	/* Bypass PAC File Distribution and Prisma Access Portal */
+    if (shExpMatch(host, "https://store.lab.swg.prismaaccess.com/pac/ppfdffnard/7d9dc480-3a35-44ed-b721-53ddbc1464cb.pac") ||
+        shExpMatch(host, "https://github.com/tdigithub/pac-file/") ||
+        shExpMatch(host, "*.lab.gpcloudservice.com") ||
+        shExpMatch(host, "*.lab.swg.prismaaccess.com"))
+        return "DIRECT";
+
   	/* Bypass RFC1918 and Localhost */
     if (isInNet(resolved_ip, "10.0.0.0", "255.0.0.0") ||
         isInNet(resolved_ip, "172.16.0.0", "255.240.0.0") ||
